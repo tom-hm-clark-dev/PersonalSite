@@ -17,6 +17,10 @@ h1 {
   text-align: left;
 }
 
+h1.title {
+  text-align: center;
+}
+
 h2 {
   color: wheat;
   text-align: left;
@@ -25,6 +29,11 @@ h2 {
 h2.cvheading {
   text-align: center;
   justify-content: center;
+}
+
+footer {
+  color: wheat;
+  text-align: center;
 }
 
 li {
@@ -89,6 +98,14 @@ font-size: 20px;
   margin: 16px;
 }
 
+.row {
+  display: flex;
+}
+.projectcolumn {
+  flex: 50%;
+  justify-content: center;
+}
+
 .artistsrow:after {
   content: "";
   display: table;
@@ -97,8 +114,8 @@ font-size: 20px;
 
 .fakeimg {
   background-color: #aaa;
-  width: 100%;
-  padding: 0px;
+  width: 80%;
+  margin: 32px;
   height: 250px;
 }
 
@@ -121,10 +138,6 @@ font-size: 20px;
   margin-top: 20px;
 }
 
-.contact {
-  background-color: #495fc4;
-}
-
 .profileimage {
   width: 250px;
   height: 250px;
@@ -144,6 +157,7 @@ font-size: 20px;
 .wrapper {
   display: flex;
   justify-content: center;
+  padding: 32px;
 }
 
 .cv-container {
@@ -157,6 +171,10 @@ font-size: 20px;
 
 .column_body {
   flex: 75%;
+}
+
+.projectleftcolumn {
+
 }
 
 @media screen and (max-width: 800px) {

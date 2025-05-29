@@ -10,6 +10,7 @@ br {
 
 p {
   color: wheat;
+  line-height: 130%;
 }
 
 h1 {
@@ -19,6 +20,8 @@ h1 {
 
 h1.title {
   text-align: center;
+  padding-top: 32px;
+  align-content: center;
 }
 
 h2 {
@@ -38,6 +41,7 @@ footer {
 
 li {
   color: wheat;
+  line-height: 200%;
 }
 
 header li {
@@ -104,6 +108,7 @@ font-size: 20px;
 .projectcolumn {
   flex: 50%;
   justify-content: center;
+  padding: 16px;
 }
 
 .artistsrow:after {
@@ -129,6 +134,10 @@ font-size: 20px;
   content: "";
   display: table;
   clear: both;
+}
+
+div.skillslist {
+  line-height: 200%;
 }
 
 .footer {
@@ -157,7 +166,12 @@ font-size: 20px;
 .wrapper {
   display: flex;
   justify-content: center;
-  padding: 32px;
+  padding: 0px;
+}
+
+.graphics {
+  display: grid;
+  grid-template-columns: 2fr;
 }
 
 .cv-container {

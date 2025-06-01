@@ -35,9 +35,16 @@ header h1 {
   color: var(--color-accent);
 }
 
+h1 a {
+  text-decoration: none;
+  color:var(--color-accent)
+}
+
 main {
   display: flex;
+  flex: 1;
   justify-content: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -84,6 +91,7 @@ nav a {
 
 nav a:hover {
   background-color: var(--color-accent-hover);
+  color: var(--color-surface);
 }
 
 nav a.active-link {
@@ -105,10 +113,18 @@ nav a.active-link {
   justify-content: center;
   text-align: center;
   background-color: var(--color-surface);
-  max-width: 700px;
+  max-width: 900px;
   width: 100%;
   padding: 2rem;
-  margin: 2rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -123,7 +139,19 @@ footer {
 .footer-icon {
   height: 3em;
   width: 3em;
+}
 
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding:  2em;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 700px) {
@@ -196,6 +224,7 @@ footer {
   nav a.active-link {
     border-bottom: none;
   }
+}
 
 /*
 body {
@@ -363,14 +392,7 @@ div.skillslist {
   margin-top: 20px;
 }
 
-.profileimage {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  padding:  50px;
-  justify-content: center;
-}
+
 
 .posterimage {
   width: 300px;

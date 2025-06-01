@@ -4,63 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
   <title>Tom Clark CV</title>
 </head>
 
 <body>
 
-<h1>Tom Clark Development</h1>
-<!-- Banner -->
+ <div class="body-overlay"></div>
+
 <header>
-<div class="banner">
-  <ul class="navbar">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="cv.html">CV</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="graphics.html">Graphic design</a></li>
-    <li style = "float:right"><a class = "contact"href="contact.html">Contact</a></li>
-  </ul>
-</div>
+  <h1><a href="index.html">Tom Clark Development</a></h1> 
+  <button class="open-sidebar-button">
+    <img src="src/menu_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Menu icon">
+  </button>
 </header>
-
-<h1 class="title">
-  Tom Clark CV
-</h1>
-
-<div class="wrapper">
-
-  <div class="leftcolumn">
-    <img class="profileimage" src="src/Profile image.jpeg" alt="TODO">
-    <h2 class="cvheading">
-      Skills
-    </h2>
-    <div class="skillslist">
+ 
+  <nav id="navbar">
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>PHP</li>
-      <li>MySQL</li>
-      <li>Java</li>
-      <li>C</li>
-      <li>Kotlin</li>
-      <li>Wordpress</li>
-      <li>Git</li>
-      <li>Figma</li>
-      <li>Photoshop</li>
-    </ul>
-    </div>
-  </div>
+      <li>
+        <button class="close-sidebar-button">
+          <img src="src/close_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Close sidebar icon">
+        </button>
 
-  <div class="rightcolumn">
-    <h2 class="cvheading">Summary</h2>
+      </li>
+      <li class="index-li"><a href="index.html">Home</a></li>
+      <li class="cv-li"><a class="active-link" href="cv.html">CV</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="graphics.html">Graphic design</a></li>
+    </ul>
+  </nav>
+
+<main>
+  <div class="wrapper">
+<div class="container">
+      <h1>
+      Tom Clark CV
+    </h1>  
+  <div class="image-container">
+    <img class="profile-image" src="src/Profile image.jpeg" alt="TODO">
+    </div>
+    <h2>
+      Summary
+    </h2>  
     <p>
       Aberystwyth University web development graduate with e-commerce experience planning
        to move to the Liverpool area, seeking employment within a web development environment.  
     </p>
+    </div>
 
-    <h2 class="cvheading">
+<div class="container">
+    <h2>
       Education
     </h2>
 
@@ -96,7 +90,7 @@
       in the Aberystwyth area.
       </p>
     
-      <h2 class="cvheading">
+      <h2>
         Activities
       </h2>
       <ul>
@@ -114,8 +108,13 @@
           as well as some C# within the Unity engine. 
         </li>
       </ul>
-  </div>
 </div>
+</div>
+</main>
+<footer>
+  <a href="https://www.linkedin.com/in/tom-clark-162405177/" target="_blank"><img class="footer-icon" src="/src/linkedin-svgrepo-com.svg" aria-label="LinkedIn profile"></a>
+  <a href="https://github.com/tom-hm-clark-dev" target="_blank"><img class="footer-icon" src="/src/github-mark.svg" aria-label="GitHub profile" ></a>
+</footer>
 
 </body>
 </html>

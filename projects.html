@@ -8,73 +8,95 @@
 </head>
 
 <body>
+<div class="body-overlay"></div>
 
-<h1>Tom Clark Development</h1>
-<!-- Banner -->
 <header>
-<div class="banner">
-  <ul class="navbar">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="cv.html">CV</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="graphics.html">Graphic design</a></li>
-    <li style = "float:right"><a class = "contact"href="contact.html">Contact</a></li>
-  </ul>
-</div>
+  <h1><a href="index.html">Tom Clark Development</a></h1> 
+  <button class="open-sidebar-button">
+    <img src="src/menu_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Menu icon">
+  </button>
 </header>
+ 
+  <nav id="navbar">
+    <ul>
+      <li>
+        <button class="close-sidebar-button">
+          <img src="src/close_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Close sidebar icon">
+        </button>
 
-    <h1 class="title">
-        Projects
-    </h1>
+      </li>
+      <li class="index-li"><a href="index.html">Home</a></li>
+      <li><a href="about-me.html">About me</a></li>
+      <li class="cv-li"><a href="cv.html">CV</a></li>
+      <li><a class="active-link" href="projects.html">Projects</a></li>
+      <li><a href="graphics.html">Graphic design</a></li>
+    </ul>
+  </nav>
+
     <div class="wrapper">
+    <h1 class="title">Projects</h1>
 
     <section>
-        <div class="row">
-        <div class="projectcolumn">
-            <div class="fakeimg">
+        <div class="grid-row">
+            <div class="container">
                 image
             </div>
-        </div>
-
-        <div class="projectcolumn">
+            <div class="container">
             <h2>
                 JavaScipt Game
             </h2>
-            <p class="projectstext">column 1 This is a game I completed as part of my University course. text text text text text text 
+            <p class="projectstext">column 1 This is a game I completed as part of my <strong>University course.</strong> text text text text text text 
                 text text text text text text text text text text text text text text text text text text 
                 text text text text text text text text text text text text text text text text text text 
                 text text text text text text text text text text text text text text text text text text 
                 text text text text text text text text text text text text text text text text text text 
             </p>
-        </div>
+            </div>
+      
         </div>
 
-        <div class="row">    
-            <div class="projectcolumn">
-                <h2>
-                    Stitch Up
-                </h2>
-                <p>This is a website I designed and built for a local music company called Stitch Up Productions.
-                     text text text text text text 
-                    text text text text text text text text text text text text text text text text text text 
-                    text text text text text text text text text text text text text text text text text text 
-                    text text text text text text text text text text text text text text text text text text 
-                    text text text text text text text text text text text text text text text text text text 
-                </p>
+        <div class="grid-row">
+            <div class="container">
+                Image
+            </div>
+            <div class="container">
+                <h2>Workout web app</h2>
+                <p>This is a website I created to track my workout progress over time</p>
+                <a href="https://github.com/tom-hm-clark-dev/Workout-app" target="_blank">
+                    <button><img class="button-icon" src="src/github-mark.svg">View on GitHub</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-row">
+            <div class="container">
+                Image
+            </div>
+            <div class="container">
+                <h2>Android energy usage app</h2>
+                <p>A project I created as part of my <strong>University degree</strong>, where I had to create
+                an Android mobile app using Kotlin that displays energy in kWh</p>
+                <a href="https://github.com/tom-hm-clark-dev/Workout-app" target="_blank">
+                    <button><img class="button-icon" src="src/github-mark.svg">View on GitHub</button>
+                </a>
             </div>
 
-            <div class="projectcolumn">
-                <div class="fakeimg">
-                    image
-                </div>
-            </div>
-            </div>
+        </div>
+
     </section>
 </div>
 </body>
 
 <footer>
-    <h3>Website created by Tom Clark</h3>
+  <div class="grid-row">
+    <a href="https://www.linkedin.com/in/tom-clark-162405177/" target="_blank">
+      <img class="footer-icon" src="src/linkedin-svgrepo-com.svg" aria-label="LinkedIn profile">
+    </a>
+    <a href="https://github.com/tom-hm-clark-dev" target="_blank">
+      <img class="footer-icon" src="src/github-mark.svg" aria-label="GitHub profile" >
+    </a>
+  </div>
+  <h4>Website created by Tom Clark</h4>
 </footer>
+
 </html>

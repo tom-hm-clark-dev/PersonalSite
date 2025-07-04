@@ -29,8 +29,10 @@ html, body {
 
 header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  border-bottom: white solid 1px;
 }
 
 header h1 {
@@ -68,16 +70,10 @@ p {
   padding: 4em 3em;
 }
 
-.index-p{
-    border-left: solid 15px var(--color-accent);
-
-}
-
 nav {
   background-color: var(--color-bg);
   display: flex;
   padding: 0em 2em;
-
 }
 
 nav ul {
@@ -152,21 +148,35 @@ nav a.nav-title {
 
 .container {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-bg);
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  margin: 1rem 1rem;
+}
+
+.sub-container {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: var(--color-surface);
-  max-width: 1000px;
-  width: 100%;
-  padding: 2rem;
-  margin: 1rem 0;
+  background-color: var(--color-bg);
+  padding: 1rem;
+  margin: 1rem 1rem;
+  border: 1px white solid;
+  width: 50%;
+  min-height: 50dvh;
 }
 
 section {
   display: flex;
   border: solid 2px white;
-  min-height: 1000px;
   background-color: red;
+  min-height: 100dvh;
 }
 
 .row {
@@ -214,6 +224,12 @@ footer {
   width: 3em;
 }
 
+.linkedin-icon {
+  height: 1.5em;
+  width: 1.5em;
+  transition: transform 100ms ease;
+}
+
 .nav-icon {
   height: 1.5em;
   width: 1.5em;
@@ -254,6 +270,13 @@ button {
   padding:  2em;
 }
 
+.logo {
+  padding: 1em 1em;
+  width: 400px;
+  height: 100px;
+  object-fit: cover;
+}
+
 .image-container {
   display: flex;
   justify-content: center;
@@ -264,6 +287,14 @@ button {
 }
 
 @media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sub-container {
+    width: 100%;
+  }
+  
   nav {
     position: fixed;
     top: 0;
@@ -273,7 +304,6 @@ button {
     z-index: 10;
     border-left: 1px solid black;
     transition: right 300ms ease-out;
-    
     background-color: var(--color-surface);
   }
 
@@ -326,13 +356,12 @@ button {
   }
 
   nav ul {
-    width: 100%;
+    margin-left: auto;
     flex-direction: column;
   }
 
   nav a {
     width: 100%;
-    padding-left: 2.5em;
   }
 
   nav a.active-link {

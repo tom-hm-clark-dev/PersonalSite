@@ -33,6 +33,7 @@ header {
   align-items: center;
   padding: 1rem;
   background-color: var(--color-surface);
+  width: 100%;
 }
 
 header h1 {
@@ -121,21 +122,6 @@ nav a.nav-title {
   font-weight: bolder;
   font-size: 1.25em;
 }
-/*
-.page-title a {
-  margin-right: auto;
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  transition: transform 0.1s ease-in-out;
-  
-}
-
-.page-title a:hover {
-  color: var(--color-accent-hover);
-  background-color: var(--color-bg);
-  transform: scale(1.05);
-}
-*/
 
 .open-sidebar-button {
   display: none;
@@ -146,14 +132,30 @@ nav a.nav-title {
   margin-left: auto;
 }
 
+button {
+width: 100px;
+background: none;
+color: var(--color-text);
+}
+
+.wrapper {
+  padding: 1rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: green solid 1px;
+}
+
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   text-align: center;
   background-color: var(--color-bg);
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
   padding: 2rem;
   margin: 1rem 1rem;
@@ -169,28 +171,45 @@ nav a.nav-title {
   padding: 1rem;
   margin: 1rem 1rem;
   border: 1px white solid;
+  width: 100%;
+  min-height: 50dvh;
+}
+
+.cv-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-bg);
+  padding: 1rem;
+  margin: 1rem 1rem;
+  border: 1px white solid;
+  width: 100%;
+  min-height: 50dvh;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--color-bg);
+  padding: 1rem;
+  margin: 1rem 1rem;
+  border: 1px blue solid;
   width: 50%;
   min-height: 50dvh;
 }
 
 section {
   display: flex;
+  flex-direction: row;
   min-height: 100dvh;
 }
 
 .row {
-  max-width: 900px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 footer {
@@ -203,6 +222,7 @@ footer {
   margin-top: auto;
   gap: 2rem;
   background-color: var(--color-surface);
+  z-index: 2;
 }
 
 .grid-row {
@@ -232,6 +252,11 @@ footer {
   width: 3em;
 }
 
+.footer-logo {
+  width: 200px;
+  height: auto;
+}
+
 .linkedin-icon {
   height: 1.5em;
   width: 1.5em;
@@ -259,7 +284,8 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-width: 160px;
+  min-width: 120px;
+  border: green solid 1px;
 }
 
 .poster-image {
@@ -273,14 +299,21 @@ footer {
 
 button {
   padding: 1em 2em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  border: red solid 1px;
+  width: 50%;
+  height: auto;
   object-fit: cover;
-  padding:  2em;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
 }
 
 .logo {
@@ -288,29 +321,50 @@ button {
   width: 400px;
   height: 100px;
   object-fit: cover;
+  margin-left: 2em;
 }
 
-.image-container {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 1400px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
 }
 
-#cv-button {
-  margin-left: auto;
-}
+@media screen and (max-width: 950px) {
 
-@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    padding: 0rem;
+  }
+  
   .logo {
     max-width: 300px;
     max-height: 100px;
   } 
   
   .container {
+    margin: 0rem;;
     flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .image-container {
+    position: static;
+    width: 100%;
+    justify-content: center;
   }
 
   .sub-container {
     width: 100%;
+    justify-content: center;
   }
   
   nav {
@@ -326,6 +380,13 @@ button {
     background-color: var(--color-surface);
     justify-content: flex-end;
   }
+
+  section {
+    margin: 0px;
+    align-items: center;
+    flex-direction: column;
+  }
+  
 
   .body-overlay {
     display: none;
@@ -361,8 +422,13 @@ button {
   }
 
   .button-icon {
-    height: 2em;
-    width: 2em;
+    height: 1em;
+    width: 1em;
+  }
+
+  .footer-icon {
+    height: 3em;
+    width: 3em;
   }
 
   .close-sidebar-button {

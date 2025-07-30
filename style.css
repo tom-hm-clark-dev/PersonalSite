@@ -2,14 +2,16 @@
     :root {
         --font-base: 'Inter', sans-serif;
         --font-size-base: 16px;
-        --line-height-base: 1.6;
+        --line-height-base: 1.6;  
       --color-bg: #000000;
-      --color-surface: #111827;
+      --color-surface: #ffffff;
       --color-text: #ffffff;
       --color-text-muted: #f3f3f3;
-      --color-accent: #2563eb;
+      --color-accent: #e11d3a;
       --color-accent-hover: #1d4ed8;
       --color-border: #e5e7eb;
+      --color-nav-text: #000000;
+      --color-nav-hover: #cccccc;
     }
 
 * {
@@ -24,11 +26,13 @@ html, body {
   flex-direction: column;
   font-family: "Inter", sans-serif;
   color: var(--color-text);
-  background-color: var(--color-bg);
 }
 
 header {
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -59,15 +63,19 @@ h1 {
 }
 
 h2 {
+  font-size: 2rem;
   line-height: 2em;
   color: var(--color-text);
   width: 100%;
 }
 
+h2 black {
+  color:var(--color-nav-text)
+}
+
 p {
   color: var(--color-text-muted);
   width: 100%;
-  text-align: left;
   padding: 4em 3em;
 }
 
@@ -92,29 +100,32 @@ nav li {
 nav a {
   display: flex;
   text-decoration: none;
-  color: var(--color-text);
-  padding: 1em 2em;
+  color: var(--color-nav-text);
+  padding: 1em;
   font-weight: bolder;
+  transition: transform 100ms ease;
 }
 
-nav a:hover {
-  color: var(--color-accent-hover);
+nav a:hover span {
+  transform:scale(1.2);
 }
 
 nav a span {
   transition: transform 100ms ease;
 }
 
-nav a:hover span {
-  transform: scale(1.2);}
-
 nav a.active-link {
-  background-color: var(--color-accent);
-  border-bottom: solid 5px var(--color-accent-hover);
+  border-bottom: solid 5px var(--color-nav-text);
+  transition: transform 100ms ease;
 }
 
-nav a.active-link:hover {
+nav a.nav-contact {
+  background-color: var(--color-accent);
   color: var(--color-text);
+}
+
+nav a.nav-contact:hover {
+  background-color: var(--color-accent-hover);
 }
 
 nav a.nav-title {
@@ -130,21 +141,68 @@ nav a.nav-title {
 .close-sidebar-button {
   display: none;
   margin-left: auto;
+
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+  align-items: center;
+}
+
+.contact-form input, textarea, button {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  border-radius: 2px;
+  text-align: center;
+  outline: none;
+}
+
+.contact-form input, textarea {
+  color: var(--color-text);
+  border: 2px solid white;
+  background-color: var(--color-bg); 
+}
+
+.contact-form input {
+  height: 2rem;
+  width: 30%;
+ 
+}
+
+.contact-form textarea {
+  width: 80%;
+  height: 10rem;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  padding: 1rem;
 }
 
 button {
 width: 100px;
-background: none;
-color: var(--color-text);
+background: var(--color-accent);
+background-color: var(--color-accent);
+outline: none;
+border-radius: 0%;
+border: none;
+text-decoration: none;
+padding: 1em;  
+font-weight: bolder;
 }
 
 .wrapper {
-  padding: 1rem 10rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: green solid 1px;
 }
 
 .container {
@@ -159,20 +217,19 @@ color: var(--color-text);
   width: 100%;
   padding: 2rem;
   margin: 1rem 1rem;
-  border: white solid 1px;
 }
+
 
 .sub-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: var(--color-bg);
   padding: 1rem;
   margin: 1rem 1rem;
-  border: 1px white solid;
   width: 100%;
   min-height: 50dvh;
+  background-color: var(--color-bg);
 }
 
 .cv-container {
@@ -184,7 +241,6 @@ color: var(--color-text);
   background-color: var(--color-bg);
   padding: 1rem;
   margin: 1rem 1rem;
-  border: 1px white solid;
   width: 100%;
   min-height: 50dvh;
 }
@@ -197,15 +253,16 @@ color: var(--color-text);
   background-color: var(--color-bg);
   padding: 1rem;
   margin: 1rem 1rem;
-  border: 1px blue solid;
   width: 50%;
   min-height: 50dvh;
 }
 
 section {
+  background-color: var(--color-bg);
+  width: 100%;
   display: flex;
   flex-direction: row;
-  min-height: 100dvh;
+  min-height: 90dvh;
 }
 
 .row {
@@ -223,6 +280,7 @@ footer {
   gap: 2rem;
   background-color: var(--color-surface);
   z-index: 2;
+  color: var(--color-nav-text)
 }
 
 .grid-row {
@@ -319,7 +377,7 @@ button {
 .logo {
   padding: 1em 1em;
   width: 400px;
-  height: 100px;
+  height: 80px;
   object-fit: cover;
   margin-left: 2em;
 }
@@ -375,7 +433,7 @@ button {
     height: 100vh;
     width: min(60%, 100%);
     z-index: 10;
-    border-left: 1px solid black;
+    border-left: 2px solid var(--color-nav-hover);
     transition: right 300ms ease-out;
     background-color: var(--color-surface);
     justify-content: flex-end;
@@ -395,18 +453,19 @@ button {
     left: 0;
     width: 100%;
     height: 100dvh;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.7);
     z-index: 5;
-    transition: opacity 0.3s ease;
+    transition: opacity 1s ease;
   }
 
   .body-overlay.active {
     display: block;
-    transition: opacity 0.3s ease;
+    transition: opacity 1s ease;
   }
 
   nav .index-li {
     margin-right: 0;
+    
   }
   
   .open-sidebar-button {
@@ -419,6 +478,7 @@ button {
 
   nav.show {
     right: 0;
+    padding: 0rem 1rem;
   }
 
   .button-icon {
@@ -433,16 +493,21 @@ button {
 
   .close-sidebar-button {
     display: flex;
+    margin-left: auto;
+    margin-right: -2rem;
+    margin-top: 2rem;
     align-items: flex-end;
     border: none;
     background-color: var(--color-surface);
   }
 
   nav ul {
+    margin: 0;
     display: flex;
+    justify-content: flex-start;
     align-items: flex-end;
     flex-direction: column;
-    border: solid red 1px;
+    gap: 2rem;
   }
 
   nav li {
@@ -451,13 +516,25 @@ button {
   }
 
   nav a {
-    color: var(--color-text);
+    color: var(--color-nav-text);
     width: 100%;
   }
 
   nav a.active-link {
     border-bottom: none;
   }
+
+  .contact-form input {
+  height: 2rem;
+  width: 80%;
+ 
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 10rem;
+  resize: none;
+}
 
   .poster-grid {
       grid-template-columns: repeat(1, 1fr);

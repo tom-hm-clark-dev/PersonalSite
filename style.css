@@ -3,12 +3,13 @@
         --font-base: 'Inter', sans-serif;
         --font-size-base: 16px;
         --line-height-base: 1.6;  
-      --color-bg: #000000;
-      --color-surface: #ffffff;
-      --color-text: #ffffff;
-      --color-text-muted: #f3f3f3;
-      --color-accent: #e11d3a;
-      --color-accent-hover: #1d4ed8;
+      --color-bg: #ffffff;
+      --color-surface: #eeeeee;
+      --color-text: #000000;
+      --color-text-white: #ffffff;
+      --color-accent: #1605ad;
+      --color-accent-old: #e11d3a;
+      --color-accent-hover: #ce1934;
       --color-border: #e5e7eb;
       --color-nav-text: #000000;
       --color-nav-hover: #cccccc;
@@ -18,6 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 1px solid rgba(47, 0, 255, 0.4);
 }
 
 html, body {
@@ -26,18 +28,31 @@ html, body {
   flex-direction: column;
   font-family: "Inter", sans-serif;
   color: var(--color-text);
+  width: 100%;
+}
+
+img, input, textarea {
+  max-width: 100%;
 }
 
 header {
   display: flex;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: var(--color-surface);
+  background-color: var(--color-bg);
+  margin: 0;
   width: 100%;
+  box-sizing: border-box;
+  box-shadow:(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+header.scrolled {
+  background-color: var(--color-text);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -50,6 +65,10 @@ h1 a {
   color:var(--color-accent)
 }
 
+.text-white {
+  color: var(--color-text-white);
+}
+
 main {
   display: flex;
   flex: 1;
@@ -58,6 +77,7 @@ main {
 }
 
 h1 {
+  font-size: 3rem;
   color: var(--color-text);
   width: 100%;
 }
@@ -76,11 +96,14 @@ h2 black {
 p {
   color: var(--color-text-muted);
   width: 100%;
-  padding: 4em 3em;
+}
+
+#navbar {
+  z-index: 2;
 }
 
 nav {
-  background-color: var(--color-surface);
+  background-color: none;
   display: flex;
   padding: 0em 2em;
 }
@@ -90,7 +113,8 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: right;
-  gap: 3em;
+  gap: 1em;
+  
 }
 
 nav li {
@@ -121,7 +145,9 @@ nav a.active-link {
 
 nav a.nav-contact {
   background-color: var(--color-accent);
-  color: var(--color-text);
+  color: var(--color-text-white);
+  border-radius: 2rem;
+  padding: 1rem;
 }
 
 nav a.nav-contact:hover {
@@ -180,21 +206,20 @@ nav a.nav-title {
 }
 
 .contact-form button {
-  background-color: var(--color-text);
-  color: var(--color-bg);
   padding: 1rem;
 }
 
 button {
 width: 100px;
-background: var(--color-accent);
-background-color: var(--color-accent);
+background-color: var(--color-bg);
+color: var(--color-accent);
 outline: none;
-border-radius: 0%;
+border-radius: 2rem;
 border: none;
 text-decoration: none;
-padding: 1em;  
+padding: 1rem;  
 font-weight: bolder;
+cursor: pointer;
 }
 
 .wrapper {
@@ -205,18 +230,32 @@ font-weight: bolder;
   align-items: center;
 }
 
-.container {
+section {
+  background-color: var(--color-bg);
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  min-height: 90dvh;
+  padding: 4rem 0rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 2rem;
+  padding: 0em 2rem;
+}
+
+.card-red {
+    background-color: var(--color-accent);
+}
+
+.card-white {
   background-color: var(--color-bg);
-  max-width: 100%;
-  width: 100%;
-  padding: 2rem;
-  margin: 1rem 1rem;
 }
 
 
@@ -225,11 +264,10 @@ font-weight: bolder;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 1rem;
-  margin: 1rem 1rem;
+  padding: 2rem;
   width: 100%;
-  min-height: 50dvh;
-  background-color: var(--color-bg);
+  background-color: none;
+  height: 100%;
 }
 
 .cv-container {
@@ -257,14 +295,6 @@ font-weight: bolder;
   min-height: 50dvh;
 }
 
-section {
-  background-color: var(--color-bg);
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  min-height: 90dvh;
-}
-
 .row {
   display: flex;
 }
@@ -278,7 +308,7 @@ footer {
   padding: 2rem 1rem;
   margin-top: auto;
   gap: 2rem;
-  background-color: var(--color-surface);
+  background-color: var(--color-bg);
   z-index: 2;
   color: var(--color-nav-text)
 }
@@ -363,10 +393,10 @@ button {
 }
 
 .profile-image {
-  border: red solid 1px;
-  width: 50%;
+  width: 20%;
   height: auto;
   object-fit: cover;
+  position: absolute;
 }
 
 .project-image {
@@ -375,11 +405,10 @@ button {
 }
 
 .logo {
-  padding: 1em 1em;
-  width: 400px;
-  height: 80px;
-  object-fit: cover;
-  margin-left: 2em;
+  width: 100%;
+  max-width: 400px; /* Constrain the maximum width */
+  height: auto;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 1400px) {
@@ -394,6 +423,13 @@ button {
 
 @media screen and (max-width: 950px) {
 
+  header {
+    flex-direction: row;
+    align-items: center;  
+    height: 100px;
+    z-index: 1; 
+  }
+
   .row {
     flex-direction: column;
   }
@@ -403,14 +439,15 @@ button {
   }
   
   .logo {
-    max-width: 300px;
-    max-height: 100px;
+    max-width: auto;
+    max-height: 60px;
+    background-color: var(--color-accent);
   } 
   
   .container {
-    margin: 0rem;;
+    margin: 0;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0rem 2rem;
     justify-content: center;
   }
 
@@ -423,6 +460,8 @@ button {
   .sub-container {
     width: 100%;
     justify-content: center;
+    padding: 0;
+    margin: 1rem 0rem;
   }
   
   nav {
@@ -431,8 +470,8 @@ button {
     top: 0;
     right: -100%;
     height: 100vh;
-    width: min(60%, 100%);
-    z-index: 10;
+    width: min(70%, 100%);
+    z-index: 1001;
     border-left: 2px solid var(--color-nav-hover);
     transition: right 300ms ease-out;
     background-color: var(--color-surface);
@@ -440,9 +479,12 @@ button {
   }
 
   section {
+    padding: 0;
     margin: 0px;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+    min-height: 50dvh;
   }
   
 
@@ -453,8 +495,8 @@ button {
     left: 0;
     width: 100%;
     height: 100dvh;
-    background-color: rgb(0, 0, 0, 0.7);
-    z-index: 5;
+    background-color: rgb(0, 0, 0, 0.4);
+    z-index: 1;
     transition: opacity 1s ease;
   }
 

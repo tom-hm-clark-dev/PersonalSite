@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="src/favicon.png" type="image/png">
+    <title>Contact</title>
+</head>
+
+<body>
+     <div class="body-overlay"></div>
+    <header>
+        <a href="index.html">
+        <img class="logo" href="index.html" src="src/Logo cropped white.png">
+        </a>  
+        <button class="open-sidebar-button">
+        <img src="src/menu_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Menu icon">
+        </button>
+        <nav id="navbar">
+            <ul>
+                <li>
+                <button class="close-sidebar-button">
+                    <img src="src/close_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Close sidebar icon">
+                </button>
+                </li>
+                <li><a href="index.html"><span>Home</span></a></li>
+                <li><a href="about.html"><span>About</span></a></li>
+                <li><a href="projects.html"><span>Projects</span></a></li>
+                <li><a class="nav-contact" href="contact.html"><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container card-red">
+                <div class="sub-container">
+                    <h2 class="text-white">Get in touch</h2>
+                    <p class="text-white">Leave a message with your name, email address and enquiry 
+                        and I will get back to you as soon as possible</p>
+                </div>
+                <div class="sub-container">
+                    <form action="https://formsubmit.co/695c751b59965e5c28e3755073dab367" method="POST" class="contact-form">
+
+                        <label class="text-white" for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label class="text-white" for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label class="text-white" for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button class="button-white" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>   
+    <footer>
+        <div class="grid-row">
+            <a href="https://www.linkedin.com/in/tom-clark-162405177/" target="_blank">
+            <img class="footer-icon" src="src/linkedin-svgrepo-com.svg" aria-label="LinkedIn profile">
+            </a>
+            <a href="https://github.com/tom-hm-clark-dev" target="_blank">
+            <img class="footer-icon" src="src/github-mark.svg" aria-label="GitHub profile" >
+            </a>
+        </div>
+        <h4>Website created by Tom Clark</h4>
+    </footer> 
+</body>
+</html>

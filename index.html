@@ -6,92 +6,140 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <script src="script.js" defer></script>
+    <script src="sample-script.js" defer></script>
     <link rel="icon" href="src/favicon.png" type="image/png">
-    <title>THMC Web Development</title>
+    <title>THMC Web Design & Development</title>
 </head>
 <body>
   <div class="body-overlay"></div>
-<header>
-    <a href="index.html">
-        <img class="logo" href="index.html" src="src/Logo cropped white.png">
-    </a>  
-    <button class="open-sidebar-button">
-        <img src="src/menu_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Menu icon">
-    </button>
-    <nav id="navbar">
-        <ul>
-        <li>
-            <button class="close-sidebar-button">
-                <img src="src/close_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Close sidebar icon">
-            </button>
-        </li>
-        <li><a class="active-link" href="index.html"><span>Home&#8482;</span></a></li>
-        <li><a href="about.html"><span>About</span></a></li>
-        <li><a href="projects.html"><span>Projects</span></a></li>
-        <li><a class="nav-contact" href="contact.html"><span>Contact</span></a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-    <div id="navbar"></div>
-    <section>
-        <div class="container card-red">
-            <div class="sub-container">
-                <h2 class="text-white">Creative, responsive website designs</h2>
-                <p class="text-white">Hi, my name's Tom and I'm a passionate web development 
-                graduate with a specialty for creating
-                responsive web designs that fit a variety of needs</p>
+    <header>
+        <a href="index.html">
+            <img class="logo" href="index.html" src="src/Logo cropped white.png">
+        </a>  
+        <button class="open-sidebar-button">
+            <img src="src/menu_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Menu icon">
+        </button>
+        <nav id="navbar">
+            <ul>
+            <li>
+                <button class="close-sidebar-button">
+                    <img src="src/close_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Close sidebar icon">
+                </button>
+            </li>
+            <li><a class="active-link" href="index.html"><span>Home</span></a></li>
+            <li><a href="about.html"><span>About</span></a></li>
+            <li><a href="projects.html"><span>Projects</span></a></li>
+            <li><a href="blog.php"><span>Blog</span></a></li>
+            <li><a class="nav-contact" href="contact.html"><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="hero-section">
+            <div class="sample-wrapper style-0">
+                    <div class="sample-row">
+                        <div class="sample-column">
+                            <div class="sample-content">    
+                                <h1 class="sample-h1"></h1>
+                                <h2 class="sample-h2">Your way.</h2>
+                                <p class="sample-body">This is more body text</p>
+                            </div>
+                        </div>
+                        <div class="sample-column sample-image-column">
+                            <img src="src/Old-College.jpg" class="sample-image">
+                        </div>
+                    </div>
+                        <button class="sample-button" onclick="plusStyle(1)">Change style</button>
+                </div>
+        </section>
+        <div class="row">
+            <div class="line"></div>
+        </div>
+        <div class="section-header">
+            <h2>Packages</h2>
+            <p>test text content content content content content content 
+                content content content content content content content
+                we love content now this is content ahhhhh content!!! 
+            </p>
+        </div>
+        <section>
+            <div class="container">
+                <div class="sub-container price-container">
+                    <h2 class="text-span">Website</h2>
+                    <ul class="bullet-point">
+                        <li><span>&#9745; Delivered within 7 days of order</span></li>
+                        <li><span>&#9745; Designed for mobile use</span></li>
+                        <li><span>&#9745; Content optimized for speed</span></li>
+                        <li><span>&#9745; Search engine optimization</span></li>
+                        <li><span>&#9745; Custom images, logos and graphics</span></li>
+                        <li><span>&#9745; Transparent development timeline</span></li>
+                        <li><span>&#9745; 24 / 7 support after delivery</span></li>
+                        <li><span>&#9745; Extensive security and bug testing</span></li>
+                    </ul>
+                    <h2>£599</h2>
+                    <p>(Includes hosting)</p>
+                </div> 
+                <div class="sub-container price-container">
+                    <h2 class="text-span">Commerce website</h2>
+                    <ul class="bullet-point">
+                        <li><span>&#9745; Delivered within 21 days of order</span></li>
+                        <li><span>&#9745; Setup with WordPress and WooCommerce</span></li>
+                        <li><span>&#9745; Designed for mobile use</span></li>
+                        <li><span>&#9745; Content optimized for speed</span></li>
+                        <li><span>&#9745; Search engine optimization</span></li>
+                        <li><span>&#9745; Custom images, logos and graphics</span></li>
+                        <li><span>&#9745; Transparent development timeline</span></li>
+                        <li><span>&#9745; Extensive security and bug testing</span></li>
+                    </ul>
+                    <h2>£1199</h2>
+                    <p>(Includes hosting)</p>
+                </div>    
             </div>
-            <div class="sub-container">
-                <h2 class="text-white">Image placeholder</h2>
+        </section>
+        <div class="row">
+            <div class="line"></div>
+        </div>
+        <div class="section-header">
+            <h2>Get in touch</h2>
+            <p>Leave a message with your name, 
+                email address and enquiry and I will get back to you as soon as possible 
+            </p>
+        </div>
+        <section>
+            <div class="container">
+                <div class="sub-container">
+                    <form action="https://formsubmit.co/695c751b59965e5c28e3755073dab367" method="POST" class="contact-form">
+
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <div class="line"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="column">
+                <p>Find me on LinkedIn:</p>
+            </div>
+            <div class="column">
+                <img class="logo" src="src/Logo cropped white.png">
+            </div>
+            <div class="column">
+                <p>&copy;Tom Clark 2025</p>
             </div>
         </div>
-    </section>
-    <section>
-        <div class="container card-white">
-            <div class="sub-container">
-                <h2 class="text-black">Flexible pricing, guaranteed results</h2>
-                <p class="text-black">Not every project is the same. There's no job too big or small,
-                and I can work with you to find a solution that fits your needs and budget</p>
-            </div>    
-        </div>
-    </section>
-    <section>
-        <div class="container card-red">
-            <div class="sub-container">
-                <h2 class="text-white">Get in touch</h2>
-                <p class="text-white">Leave a message with your name, email address and enquiry 
-                    and I will get back to you as soon as possible</p>
-            </div>
-            <div class="sub-container">
-                <form action="https://formsubmit.co/695c751b59965e5c28e3755073dab367" method="POST" class="contact-form">
-
-                    <label class="text-white" for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label class="text-white" for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label class="text-white" for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
-    </section>
-</main>
-<footer>
-  <div class="grid-row">
-    <a href="https://www.linkedin.com/in/tom-clark-162405177/" target="_blank">
-      <img class="footer-icon" src="src/linkedin-svgrepo-com.svg" aria-label="LinkedIn profile">
-    </a>
-    <a href="https://github.com/tom-hm-clark-dev" target="_blank">
-      <img class="footer-icon" src="src/github-mark.svg" aria-label="GitHub profile" >
-    </a>
-  </div>
-  <h4>Website created by Tom Clark</h4>
-</footer>
+    </footer>
 </body>
 </html>

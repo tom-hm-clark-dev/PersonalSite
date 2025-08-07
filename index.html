@@ -6,18 +6,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <script src="script.js" defer></script>
-    <script src="sample-script.js" defer></script>
+    <script src="hero-script.js" defer></script>
     <link rel="icon" href="src/favicon.png" type="image/png">
     <title>TMC Web Design</title>
 </head>
 <body>
   <div class="body-overlay"></div>
     <header>
-        <a href="index.html">
-            <h1>TMC Web Design</h1>
-        </a>  
+      <a href="index.html">
+          <h1>TMC Web Design</h1>
+      </a>  
         <button class="open-sidebar-button">
-            <img src="src/menu_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Menu icon">
+          <img src="src/menu_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Menu icon">
         </button>
         <nav id="navbar">
             <ul>
@@ -26,131 +26,181 @@
                     <img src="src/close_40dp_C9C9C9_FILL0_wght300_GRAD0_opsz40.svg" alt="Close sidebar icon">
                 </button>
             </li>
-            <li><a class="active-link" href="index.html"><span>Home</span></a></li>
-            <li><a href="about.html"><span>About</span></a></li>
-            <li><a href="projects.html"><span>Projects</span></a></li>
-            <li><a href="blog.php"><span>Blog</span></a></li>
-            <li><a class="nav-contact" href="contact.html"><span>Contact</span></a></li>
+            <li><a href="#about"><span>About</span></a></li>
+            <li><a href="#projects"><span>Projects</span></a></li>
+            <li><a href="#packages"><span>Packages</span></a></li>
+            <li><a href="#faqs"><span>FAQs</span></a></li>
+            <li><a class="nav-contact" href="#contact"><span>Contact</span></a></li>
             </ul>
         </nav>
     </header>
     <main id="main">
-        <section class="hero-section">
-            <div class="sample-overlay"></div>
-            <div class="sample-wrapper style-0">
-                    <div class="sample-row">
-                        <div class="sample-column">
-                            <div class="sample-content">    
-                                <h1 class="sample-h1"></h1>
-                                <h2 class="sample-h2">Your way.</h2>
-                                <p class="sample-body">This is more body text</p>
-                            </div>
-                        </div>
-                        <div class="sample-column sample-image-column">
-                            <img src="src/Old-College.jpg" class="sample-image">
-                        </div>
-                    </div>
-                        <button class="sample-button" onclick="plusStyle(1)">Change style</button>
+        <section id="hero">
+            <div class="hero-wrapper">
+                <div class="hero-content">    
+                    <h1 class="hero-h1"></h1>
+                    <h2 class="hero-h2">Your way.</h2>
+                    <p class="hero-body">This is more body text</p>
                 </div>
+                <button class="hero-button">Change style</button>
+            </div>
         </section>
+
+        <section id="about">
         <div class="row">
             <div class="line"></div>
         </div>
         <div class="section-header">
-            <h2>Packages</h2>
+            <h2>About me</h2>
+            <p>
+            Aberystwyth University web development graduate with a passion for creating responsive and creative web designs, 
+            and previous experience within a global e-commerce environment. Since University I have been honing my skills in web design and development.
+            </p>
+        </div>
+        <div class="container">
+            <div class="sub-container">
+                <h3 class="text-span">Fast delivery</h3>
+                <p class="text-span">I aim to deliver all websites within 28 days of order, with regular updates on progress</p>
+            </div>
+            <div class="sub-container">
+                <h3 class="text-span">Mobile friendly</h3>
+                <p class="text-span">All websites are designed to be fully responsive, ensuring a great user experience on all devices</p>
+            </div>
+            <div class="sub-container">
+                <h3 class="text-span">SEO optimized</h3>
+                <p class="text-span">All websites are built with search engine optimization in mind, helping you to rank higher in search results</p>
+            </div>
+            <div class="sub-container">
+                <h3 class="text-span">Custom designs</h3>
+                <p class="text-span">All websites are designed to your specifications, with custom images, logos and graphics</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="row">
+            <div class="line"></div>
+        </div>
+        <div class="section-header">
+            <h2>Projects</h2>
             <p>test text content content content content content content 
                 content content content content content content content
                 we love content now this is content ahhhhh content!!! 
             </p>
         </div>
-        <section>
-            <div class="container">
-                <div class="sub-container price-container">
-                    <h2 class="text-span">Landing page</h2>
-                    <p class="text-span">Single page website, perfect for local businesses</p>
-                    <ul class="bullet-point">
-                        <li><span>&#9745; Delivered within 7 days of order</span></li>
-                        <li><span>&#9745; Designed for mobile use</span></li>
-                        <li><span>&#9745; Content optimized for speed</span></li>
-                        <li><span>&#9745; Search engine optimization</span></li>
-                        <li><span>&#9745; Custom images, logos and graphics</span></li>
-                        <li><span>&#9745; Transparent development timeline</span></li>
-                        <li><span>&#9745; 24 / 7 support after delivery</span></li>
-                        <li><span>&#9745; Extensive security and bug testing</span></li>
-                    </ul>
-                    <h2>£299</h2>
-                    <p>(Excludes domain & hosting)</p>
-                </div> 
-                <div class="sub-container price-container">
-                    <h2 class="text-span">Basic website</h2>
-                    <p class="text-span">3-5 page website, great option for artists or businesses requiring a gallery / blog section</p>
-                    <ul class="bullet-point">
-                        <li><span>&#9745; Delivered within 14 days of order</span></li>
-                        <li><span>&#9745; Designed for mobile use</span></li>
-                        <li><span>&#9745; Setup with WordPress support</span></li>
-                        <li><span>&#9745; Content optimized for speed</span></li>
-                        <li><span>&#9745; Search engine optimization</span></li>
-                        <li><span>&#9745; Custom images, logos and graphics</span></li>
-                        <li><span>&#9745; Transparent development timeline</span></li>
-                        <li><span>&#9745; Extensive security and bug testing</span></li>
-                    </ul>
-                    <h2>£499</h2>
-                    <p>(Excludes domain & hosting)</p>
-                </div> 
-                <div class="sub-container price-container">
-                    <span style='font-size:3rem;'>&#9729;</span>
+        <div class="container">
+            <div class="sub-container">
 
-                    <h2 class="text-span">Commerce website</h2>
-                    <p class="text-span">Everything you need to get started selling products</p>
-                    <ul class="bullet-point">
-                        <li><span>&#9745; Delivered within 28 days of order</span></li>
-                        <li><span>&#9745; Setup with WordPress and WooCommerce</span></li>
-                        <li><span>&#9745; Designed for mobile use</span></li>
-                        <li><span>&#9745; Content optimized for speed</span></li>
-                        <li><span>&#9745; Search engine optimization</span></li>
-                        <li><span>&#9745; Custom images, logos and graphics</span></li>
-                        <li><span>&#9745; Transparent development timeline</span></li>
-                        <li><span>&#9745; Extensive security and bug testing</span></li>
-                    </ul>
-                    <h2>£999</h2>
-                    <p>(Excludes hosting)</p>
-                </div>     
             </div>
+        </div>
+    </section>  
+
+    <section id="packages">
+    <div class="row">
+        <div class="line"></div>
+    </div>
+    <div class="section-header">
+        <h2>Packages</h2>
+        <p>test text content content content content content content 
+            content content content content content content content
+            we love content now this is content ahhhhh content!!! 
+        </p>
+    </div>
+        <div class="container">
+            <div class="sub-container price-container">
+                <h3 class="text-span">Landing page</h3>
+                <p class="text-span">Single page website, perfect for local businesses, like this one!</p>
+                <ul class="bullet-point">
+                    <li><span>&#9745; Delivered within 7 days of order</span></li>
+                    <li><span>&#9745; Designed for mobile use</span></li>
+                    <li><span>&#9745; Content optimized for speed</span></li>
+                    <li><span>&#9745; Search engine optimization</span></li>
+                    <li><span>&#9745; Custom images, logos and graphics</span></li>
+                    <li><span>&#9745; Transparent development timeline</span></li>
+                    <li><span>&#9745; 24 / 7 support after delivery</span></li>
+                    <li><span>&#9745; Extensive security and bug testing</span></li>
+                </ul>
+                <h3>£299</h3>
+                <p>(Excludes domain & hosting)</p>
+            </div> 
+            <div class="sub-container price-container">
+                <h3 class="text-span">Full website</h3>
+                <p class="text-span">3-5 page website, great option for artists or businesses requiring a gallery / blog section</p>
+                <ul class="bullet-point">
+                    <li><span>&#9745; Delivered within 14 days of order</span></li>
+                    <li><span>&#9745; Designed for mobile use</span></li>
+                    <li><span>&#9745; Setup with WordPress support</span></li>
+                    <li><span>&#9745; Content optimized for speed</span></li>
+                    <li><span>&#9745; Search engine optimization</span></li>
+                    <li><span>&#9745; Custom images, logos and graphics</span></li>
+                    <li><span>&#9745; Transparent development timeline</span></li>
+                    <li><span>&#9745; Extensive security and bug testing</span></li>
+                </ul>
+                <h3>£499</h3>
+                <p>(Excludes domain & hosting)</p>
+            </div> 
+            <div class="sub-container price-container">
+                <span style='font-size:3rem;'>&#9729;</span>
+                <h3 class="text-span">Commerce website</h3>
+                <p class="text-span">Everything you need to get started selling products</p>
+                <ul class="bullet-point">
+                    <li><span>&#9745; Delivered within 28 days of order</span></li>
+                    <li><span>&#9745; Setup with WordPress and WooCommerce</span></li>
+                    <li><span>&#9745; Designed for mobile use</span></li>
+                    <li><span>&#9745; Content optimized for speed</span></li>
+                    <li><span>&#9745; Search engine optimization</span></li>
+                    <li><span>&#9745; Custom images, logos and graphics</span></li>
+                    <li><span>&#9745; Transparent development timeline</span></li>
+                    <li><span>&#9745; Extensive security and bug testing</span></li>
+                </ul>
+                <h3>£999</h3>
+                <p>(Excludes hosting)</p>
+            </div>     
+        </div>
         </section>
+        <section id="faqs">
         <div class="row">
             <div class="line"></div>
         </div>
-        <section>
-            <div class="container contact-container">
-                <div class="sub-container no-border">
-                <h2>Get in touch</h2>
-                <p>Leave a message with your name, 
-                    email address and enquiry and I will get back to you as soon as possible 
-                </p>
-                </div>
-                <div class="sub-container">
-                    <form action="https://formsubmit.co/695c751b59965e5c28e3755073dab367" method="POST" class="contact-form">
-
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <div class="row">
-            <div class="line"></div>
+        <div class="section-header">
+            <h2>Frequently asked questions</h2>
+            <p>test text content content content content content content 
+                content content content content content content content
+                we love content now this is content ahhhhh content!!! 
+            </p>
         </div>
+        </section>
+    </section>
+    <section id="contact">
+    <div class="row">
+        <div class="line"></div>
+    </div>
+        <div class="container contact-container">
+            <div class="sub-container no-border">
+            <h2>Get in touch</h2>
+            <p>Leave a message with your name, 
+                email address and enquiry and I will get back to you as soon as possible 
+            </p>
+            </div>
+            <div class="sub-container">
+                <form action="https://formsubmit.co/695c751b59965e5c28e3755073dab367" method="POST" class="contact-form">
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
     </main>
     <footer>
-        <div class="row">
             <div class="column">
                 <p>Find me on LinkedIn:</p>
             </div>
@@ -160,7 +210,6 @@
             <div class="column">
                 <p>&copy;Tom Clark 2025</p>
             </div>
-        </div>
     </footer>
 </body>
 </html>

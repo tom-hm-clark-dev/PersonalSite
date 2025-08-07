@@ -4,6 +4,7 @@ const overlay = document.querySelector(".body-overlay");
 const openBtn = document.querySelector(".open-sidebar-button");
 const closeBtn = document.querySelector(".close-sidebar-button");
 const hero = document.querySelector(".hero-section");
+const heroContent = document.querySelector(".hero-content");
 const main = document.getElementById('main');
 const body = document.body;
 var headerHeight = header.offsetHeight;
@@ -11,7 +12,7 @@ var headerHeight = header.offsetHeight;
 const DEBUG = true;
 
 window.addEventListener('DOMContentLoaded', () => {
-   main.style.paddingTop = '99px';
+   //heroContent.style.marginTop = '100px';
 }
 );
 
@@ -41,7 +42,7 @@ window.addEventListener('scroll', function() {
     console.log('scrolled, header height is currently: ' + headerHeight);
     // Adjusts padding based on header height
     headerHeight = header.offsetHeight;
-    main.style.paddingTop = '62px';
+    //heroContent.style.marginTop = '62px';
   } else {
     header.classList.remove('scrolled');
     headerHeight = header.offsetHeight;
@@ -49,7 +50,7 @@ window.addEventListener('scroll', function() {
 
     // Reset padding
     headerHeight = header.offsetHeight;
-    main.style.paddingTop = '99px';
+    //heroContent.style.marginTop = '100px';
   }
   console.log('scrolled')
 });

@@ -9,7 +9,9 @@ const main = document.getElementById('main');
 const body = document.body;
 var headerHeight = header.offsetHeight;
 
-const DEBUG = true;
+openBtn.addEventListener("click", openSidebar);
+closeBtn.addEventListener("click", closeSidebar);
+overlay.addEventListener("click", closeSidebar);
 
 window.addEventListener('DOMContentLoaded', () => {
    //heroContent.style.marginTop = '100px';
@@ -55,7 +57,16 @@ window.addEventListener('scroll', function() {
   console.log('scrolled')
 });
 
-openBtn.addEventListener("click", openSidebar);
-closeBtn.addEventListener("click", closeSidebar);
-overlay.addEventListener("click", closeSidebar);
+document.querySelectorAll(".accordian-header").forEach(button => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
 
+    button.classList.toggle("active");
+
+    if (button.classList.contains("active")) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+    }
+  });
+});

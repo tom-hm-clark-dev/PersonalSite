@@ -118,7 +118,7 @@ main {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--color-text);
   width: 100%;
 }
@@ -322,15 +322,42 @@ section {
 }
 
 .hero-content {
-    flex-direction: column;
-    width: 800px;
+    max-width: 1000px;
+    padding: 0 1rem;
+}
+
+.hero-h1, .hero-h2, .hero-body {
+  text-align: left;
+  opacity: 0;
+}
+
+.hero-h1 {
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero-h2 {
+  transform: translateX(20%);
+  animation: fadeIn 3s ease forwards;
+  animation-delay: 1s;
+}
+
+.hero-body {
+  width: 100%;
+  max-width: 600px;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .section-header {
   justify-content: center;
   text-align: center;
   display: flex;
-  max-width: 800px;
+  max-width: 1000px;
   flex-direction: column;
   padding: 0rem 2rem;
   margin-bottom: 1rem;
@@ -338,14 +365,14 @@ section {
 }
 
 .container {
-  width: 100%;
+  width: 1000px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 2rem;
-  padding: 0em 2rem;
+  padding: 8px 2rem;
   background-color: none;
 }
 
@@ -365,6 +392,40 @@ section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   height: 100%;
+}
+
+.accordian-container {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.accordian-header {
+  border-radius: 4px 4px 2px 2px;
+  width: 100%;
+  text-align: left;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.accordian-header:after {
+  content: " +";
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.accordian-header.active:after {
+  content: " -";
+}
+
+.accordian-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 1rem;
+}
+
+.accordian-content p {
+  padding: 1rem 0;
 }
 
 .no-border {
@@ -585,9 +646,10 @@ footer .column {
     align-items: center;  
     justify-content: center;
     z-index: 1; 
-    padding: 0;
-    height: 75px;
+    padding: 0 0.5rem;
+    height: 60px;
   }
+  
   
   header.scrolled {
     height: 60px;
@@ -640,6 +702,7 @@ footer .column {
   }
 
   .row {
+    padding: 2rem 0rem;
     flex-direction: column;
   }
 
@@ -650,7 +713,7 @@ footer .column {
   #hero {
     display: flex;
     margin:0;
-    height: 80dvh;
+    height: 100dvh;
     width: 100%;
   }
 
@@ -659,6 +722,10 @@ footer .column {
     margin: 0;
     width: 100%;  
   }
+
+  .hero-content {
+    width: 100%;
+  }
   
   .container {
     margin: 0;
@@ -666,6 +733,7 @@ footer .column {
     padding: 0rem 1rem;
     justify-content: center;
     gap: 0;
+    width: 100%;
   }
 
   .image-container {
@@ -687,7 +755,6 @@ footer .column {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 50dvh;
   }
   
 

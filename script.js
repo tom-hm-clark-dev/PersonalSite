@@ -1,4 +1,5 @@
 const navbar = document.getElementById('navbar');
+const mobileNav = document.querySelector(".mobile-navbar")
 const header = document.querySelector("header");
 const overlay = document.querySelector(".body-overlay");
 const openBtn = document.querySelector(".open-sidebar-button");
@@ -9,24 +10,31 @@ const main = document.getElementById('main');
 const body = document.body;
 var headerHeight = header.offsetHeight;
 
+// Activate mobile buttons
 openBtn.addEventListener("click", openSidebar);
 closeBtn.addEventListener("click", closeSidebar);
 overlay.addEventListener("click", closeSidebar);
 
+// Closes mobile navbar when link is clicked
 window.addEventListener('DOMContentLoaded', () => {
-   //heroContent.style.marginTop = '100px';
+    mobileNav.querySelectorAll("li a").forEach(link => {
+    link.addEventListener("click", () => {
+      closeSidebar();
+    });
+  });
 }
 );
 
 function openSidebar() {
-  navbar.classList.add("show")
-  overlay.classList.add("active")
+  navbar.classList.add("show");
+  overlay.classList.add("active");
   disableScroll();
 }
 
 function closeSidebar() {
-  navbar.classList.remove("show")
-  overlay.classList.remove("active")
+  navbar.classList.remove("show");
+  overlay.classList.remove("active");
+  
   disableScroll();  
 }
 

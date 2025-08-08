@@ -20,7 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: rgba(25, 25, 213, 0.5) 1px solid;
+  /* outline: rgba(25, 25, 213, 0.5) 1px solid; */
 }
 
 html {
@@ -195,7 +195,8 @@ nav a.nav-contact {
 }
 
 nav a.nav-contact:hover {
-  background-color: var(--color-accent-hover);
+  background: linear-gradient(45deg, #e11d3a, #5907bd);
+  color: var(--color-nav-text)
 }
 
 nav a.nav-title {
@@ -237,13 +238,13 @@ nav a.nav-title {
   line-height: var(--line-height-base);
   border-radius: 2px;
   text-align: left;
-  outline: rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input, textarea {
   color: var(--color-text);
   background-color: var(--color-bg); 
   padding: 8px;
+  outline: rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input {
@@ -336,7 +337,6 @@ section {
 }
 
 .hero-h2 {
-  transform: translateX(20%);
   animation: fadeIn 3s ease forwards;
   animation-delay: 1s;
 }
@@ -345,7 +345,7 @@ section {
   width: 100%;
   max-width: 600px;
   animation: fadeIn 1s ease forwards;
-  animation-delay: 3s;
+  animation-delay: 2.5s;
 }
 
 @keyframes fadeIn {
@@ -397,6 +397,7 @@ section {
 .accordian-container {
   flex-direction: column;
   justify-content: center;
+  border: red 1px solid;
 }
 
 .accordian-header {
@@ -676,6 +677,7 @@ footer .column {
 
   header.scrolled nav a.nav-contact {
     color: white;
+    background-color: var(--color-text);
   }
 
   .logo {
@@ -687,7 +689,7 @@ footer .column {
     background-color: var(--color-accent);
   } 
 
-  nav {
+  .mobile-navbar {
     display: flex;
     position: fixed;
     top: 0;
@@ -800,7 +802,7 @@ footer .column {
     margin-top: 0;
     align-items: flex-end;
     border: none;
-    background-color: none;
+    background-color: rgba(0, 0, 0, 0.0);
   }
 
   nav ul {
@@ -813,7 +815,6 @@ footer .column {
   }
 
   nav li {
-    border: white solid 1px;
     margin-right: 0;
   }
 

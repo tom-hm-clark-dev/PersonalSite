@@ -50,20 +50,7 @@ function disableScroll() {
 window.addEventListener('scroll', function() {
   if (window.scrollY > 1) {
     header.classList.add('scrolled');
-    console.log('scrolled, header height is currently: ' + headerHeight);
-    // Adjusts padding based on header height
-    headerHeight = header.offsetHeight;
-    //heroContent.style.marginTop = '62px';
-  } else {
-    header.classList.remove('scrolled');
-    headerHeight = header.offsetHeight;
-    console.log('RESET: header height is now: ' + headerHeight);
-
-    // Reset padding
-    headerHeight = header.offsetHeight;
-    //heroContent.style.marginTop = '100px';
-  }
-  console.log('scrolled')
+  } else { header.classList.remove('scrolled'); }
 });
 
 accordians.forEach(accordian => {

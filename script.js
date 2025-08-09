@@ -12,7 +12,6 @@ const main = document.getElementById('main');
 const body = document.body;
 const accordians = document.querySelectorAll(".accordian-header");
 const sectionHeader = document.querySelectorAll(".section-header");
-var headerHeight = header.offsetHeight;
 
 // Activate mobile buttons
 openBtn.addEventListener("click", openSidebar);

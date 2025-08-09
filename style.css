@@ -245,22 +245,16 @@ nav a.nav-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 40px;
-  height: 40px;
-  font-size: 1.8rem;
-  transition: transform 100ms ease-in-out;
-  border-radius: 50%;
-  background-color: var(--color-bg-black);
-  color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-bg-black);
+  transition: transform 0.1s ease;
+
 }
 
 .icon:hover {
   cursor: pointer;
   transform: scale(1.2);
-  background-color: rgba(0, 0, 0, 0.0);
-  background: linear-gradient(45deg, var(--color-gradient-one), var(--color-gradient-two));
 }
 
 a.icon {

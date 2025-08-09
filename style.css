@@ -130,6 +130,10 @@ h2 {
   width: 100%;
 }
 
+h3 {
+  font-size: 1.5rem;
+}
+
 .text-span {
   width: 100%;
   margin-bottom: 16px;
@@ -232,7 +236,7 @@ nav a.nav-title {
   align-items: center;
 }
 
-.contact-form input, textarea, button {
+.contact-form input, textarea {
   font-family: var(--font-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
@@ -259,28 +263,19 @@ nav a.nav-title {
   text-align: left;
 }
 
-.contact-form button {
-  padding: 1rem;
-  background-color:rgba(0, 0, 0, 0.0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  outline: rgba(0, 0, 0, 0.4) solid 2px;
-}
-
-.contact-form button:hover {
-  transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 0.1);
-}
 
 button {
-background-color: var(--color-bg);
-color: var(--color-accent);
-outline: none;
-border-radius: 2rem;
-border: none;
-text-decoration: none;
-padding: 1rem;  
-font-weight: bolder;
-cursor: pointer;
+  background-color: #000000;
+  color: var(--color-text-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  outline: none;
+  border-radius: 2rem;
+  border: none;
+  text-decoration: none;
+  padding: 1rem;  
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 1.2rem;
 }
 
 section {
@@ -322,9 +317,11 @@ section {
 }
 
 .hero-content {
+  display: flex;
   flex: 1;
-    max-width: 1000px;
-    padding: 0 1rem;
+  max-width: 1200px;
+  align-items: flex-start;
+  padding: 0 1rem;
 }
 
 .hero-h1, .hero-h2, .hero-body {
@@ -336,6 +333,7 @@ section {
 }
 
 .hero-h1 {
+  font-size: 3rem;
   animation: fadeIn 1s ease forwards;
 }
 
@@ -345,17 +343,13 @@ section {
 }
 
 .hero-body {
-  width: 100%;
-  max-width: 600px;
   animation: fadeIn 1s ease forwards;
   animation-delay: 2.5s;
 }
 
 .hero-button {
+  margin-top: 2rem;  
   position: relative;
-  margin-top: auto;
-  width:auto;
-  text-align: center;
   color: var(--color-nav-text);
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -364,8 +358,9 @@ section {
   animation-delay: 3s;
 }
 
-.hero-button:hover {
-  transform: scale(1.1);
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -379,13 +374,14 @@ section {
   display: flex;
   max-width: 1000px;
   flex-direction: column;
+  margin-bottom: 2rem;
   padding: 0rem 2rem;
-  margin-bottom: 1rem;
   background-color: var(--color-bg);
 }
 
 .container {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -414,22 +410,37 @@ section {
   height: 100%;
 }
 
-.accordian-container {
+.container.accordian-container {
+  display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
-  border: red 1px solid;
+  gap: 1rem;  
+  padding: 1rem 0rem;
+}
+
+.accordian {
+  width: 100%;
 }
 
 .accordian-header {
-  border-radius: 4px 4px 2px 2px;
+  border-radius: 8px 8px 2px 2px;
+  display: block;
   width: 100%;
   text-align: left;
-  font-size: 1.2rem;
   cursor: pointer;
+  font-weight: 200;
+  box-sizing: border-box;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.accordian-header:hover {
+  transform: scale(1);
 }
 
 .accordian-header:after {
-  content: " +";
+  content: "+";
   float: right;
   transition: transform 0.3s ease;
 }
@@ -440,18 +451,30 @@ section {
 
 .accordian-content {
   max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  text-align: left;
   padding: 0 1rem;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: #f9f9f9;
 }
 
 .accordian-content p {
   padding: 1rem 0;
+  font-style: italic;
 }
 
 .no-border {
   border: none;
   box-shadow: none;
+}
+
+.price-container {
+  min-height: 640px;
+}
+
+.price-container > .price {
+  margin-top: auto;
 }
 
 .price-container > h2 {
@@ -499,28 +522,11 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   gap: 2rem;
-  background-color: var(--color-bg-black);
-  color: var(--color-text-white);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   height: 100px;
   margin-top: 1rem;
-}
-
-.grid-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1em;
-  justify-content: center;
-  align-items: center;
-  padding: 1em 2em;
-}
-
-.poster-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
-  justify-content: center;
-  align-items: center;
-  padding: 1em 2em;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
 }
 
 .row h1 {
@@ -635,26 +641,8 @@ footer .column {
 }
 
 @media screen and (min-width: 1200px) {
-  header {
-    flex-wrap: wrap;
-  }
 
-  section {
-    height: auto;
-  }
 
-  .container {
-    align-items: flex-start;
-  }
-
-  .sub-container {
-    max-width: 450px;
-    height: auto;
-  }
-
-  nav {
-    flex-wrap: wrap;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -667,10 +655,9 @@ footer .column {
     align-items: center;  
     justify-content: center;
     z-index: 1; 
-    padding: 0 0.5rem;
+    padding: 4px 0rem;
     height: 60px;
   }
-  
   
   header.scrolled {
     height: 60px;
@@ -745,8 +732,9 @@ footer .column {
     width: 100%;  
   }
 
-  .hero-content {
-    width: 100%;
+  .section-header {
+    padding: 0rem 1rem;
+    margin-bottom: 8px;
   }
   
   .container {
@@ -771,6 +759,13 @@ footer .column {
     margin: 1rem 0rem;
   }
 
+  .price-container {
+    min-height: auto;
+  }
+  .accordian {
+    padding: 0rem 1rem;
+  }
+
   section {
     padding: 0;
     margin: 0px;
@@ -779,7 +774,6 @@ footer .column {
     flex-direction: column;
   }
   
-
   .body-overlay {
     display: none;
     position: fixed;
@@ -807,7 +801,9 @@ footer .column {
     padding: 0rem 1rem;
     margin-left: auto;
     border: none;
-    top: 50%;
+    border-radius: 0;
+    box-shadow: none;
+
   }
 
   nav.show {
@@ -823,6 +819,7 @@ footer .column {
     align-items: flex-end;
     border: none;
     background-color: rgba(0, 0, 0, 0.0);
+    box-shadow: none;
   }
 
   nav ul {
@@ -872,10 +869,10 @@ footer .column {
 }
 
 .hero-content {
-  display: flex;
+  width: 100%;
+  min-width: auto;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: left;
 }
 
@@ -885,6 +882,7 @@ footer .column {
 .hero-overlay.fade-out {
     animation: fadeOut 1s forwards;
 }
+
 /* .hero-overlay.active {
   display: block;
   background-color: rgba(255, 255, 255, 1);

@@ -8,6 +8,7 @@ const hero = document.querySelector(".hero-section");
 const heroContent = document.querySelector(".hero-content");
 const main = document.getElementById('main');
 const body = document.body;
+const accordians = document.querySelectorAll(".accordian-header");
 var headerHeight = header.offsetHeight;
 
 // Activate mobile buttons
@@ -65,16 +66,23 @@ window.addEventListener('scroll', function() {
   console.log('scrolled')
 });
 
-document.querySelectorAll(".accordian-header").forEach(button => {
-  button.addEventListener("click", () => {
-    const content = button.nextElementSibling;
+accordians.forEach(accordian => {
+  accordian.addEventListener("click", () => {
+    const accordianContent = accordian.nextElementSibling;
 
-    button.classList.toggle("active");
+    accordians.forEach(otherAccordians => {
+      if (otherAccordians !== accordian) {
+        otherAccordians.classList.remove("active");
+        otherAccordians.nextElementSibling.style.maxHeight = null;
+      }
+    });
 
-    if (button.classList.contains("active")) {
-      content.style.maxHeight = content.scrollHeight + "px";
+    accordian.classList.toggle("active");
+
+    if (accordian.classList.contains("active")) {
+      accordianContent.style.maxHeight = accordianContent.scrollHeight + "px";
     } else {
-      content.style.maxHeight = null;
+      accordianContent.style.maxHeight = null;
     }
   });
 });

@@ -5,10 +5,13 @@ const overlay = document.querySelector(".body-overlay");
 const openBtn = document.querySelector(".open-sidebar-button");
 const closeBtn = document.querySelector(".close-sidebar-button");
 const hero = document.querySelector(".hero-section");
+const container = document.querySelectorAll(".container");
+const subContainer = document.querySelectorAll(".sub-container");
 const heroContent = document.querySelector(".hero-content");
 const main = document.getElementById('main');
 const body = document.body;
 const accordians = document.querySelectorAll(".accordian-header");
+const sectionHeader = document.querySelectorAll(".section-header");
 var headerHeight = header.offsetHeight;
 
 // Activate mobile buttons
@@ -25,6 +28,31 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 }
 );
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+sectionHeader.forEach(section => {
+  observer.observe(section);
+});
+
+container.forEach(cont => {
+  observer.observe(cont);
+});
+
+subContainer.forEach(sub => {
+  observer.observe(sub);
+});
+
+
 
 function openSidebar() {
   navbar.classList.add("show");

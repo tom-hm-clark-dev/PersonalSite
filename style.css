@@ -4,9 +4,9 @@
         --font-size-base: 16px;
         --line-height-base: 1.6;  
       --color-bg: #ffffff;
-      --color-bg-black: #000000;
+      --color-bg-black: #17171a;
       --color-surface: #eeeeee;
-      --color-text: #000000;
+      --color-text: #17171a;
       --color-text-white: #ffffff;
       --color-text-muted: #606060;
       --color-accent: #1605ad;
@@ -72,7 +72,7 @@ header {
 header.scrolled {
   display: flex;
   transition: all 200ms ease-in-out;
-  background-color: #000000;
+  background-color: #17171a;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   align-items: center;
   padding: 4px 1rem;
@@ -80,7 +80,7 @@ header.scrolled {
 }
 
 header.scrolled .logo {
-  background-color: #000000;
+  background-color: var(--color-bg-black);
   transition: all 100ms ease-in-out;
   max-width: 200px;
 }
@@ -252,7 +252,7 @@ nav a.nav-title {
   font-size: 1.8rem;
   transition: transform 100ms ease-in-out;
   border-radius: 50%;
-  background-color: black;
+  background-color: var(--color-bg-black);
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -305,7 +305,7 @@ a.icon {
 
 
 button {
-  background-color: #000000;
+  background-color: var(--color-bg-black);
   color: var(--color-text-white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   outline: none;
@@ -373,16 +373,19 @@ section {
 }
 
 .hero-h1 {
-  font-size: 3rem;
+  font-size: 4em;
   animation: fadeIn 1s ease forwards;
 }
 
 .hero-h2 {
+  font-size: 3em;
   animation: fadeIn 3s ease forwards;
   animation-delay: 1s;
 }
 
 .hero-body {
+  font-size: 1.2em;
+  max-width: 40%;
   animation: fadeIn 1s ease forwards;
   animation-delay: 2.5s;
 }
@@ -421,7 +424,15 @@ button:hover {
   margin-bottom: 2rem;
   padding: 0rem 2rem;
   background-color: rgba(0, 0, 0, 0.0);
+
+  opacity: 0;
+  transition: all 0.8s ease-out;
 }
+
+.section-header.show {
+  opacity: 1;
+}
+
 
 .container {
   width: 100%;
@@ -434,7 +445,17 @@ button:hover {
   gap: 2rem;
   padding: 8px 2rem;
   background-color: none;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
 }
+
+.container.show {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+
 
 .contact-container {
   display: flex;
@@ -457,10 +478,14 @@ button:hover {
   border-radius: 4px;
   height: 100%;
   background-color: #f9f9f9;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
 }
 
-#about {
-  z-index: 2;
+.sub-container.show {
+  transform: translateY(-20px);
+  opacity: 1;
 }
 
 .container.accordian-container {
@@ -698,6 +723,7 @@ footer .column {
   }
   
   header.scrolled {
+    
     height: 60px;
     padding: 4px 0rem;
 
@@ -713,7 +739,7 @@ footer .column {
   }
 
   header.scrolled nav a {
-    color:#000000
+    color:var(--color-bg-black);
   }
 
   nav a.nav-contact {
@@ -772,8 +798,20 @@ footer .column {
 
   .section-header {
     padding: 0rem 1rem;
-    margin-bottom: 8px;
-    
+    margin-bottom: 2rem;
+  }
+  
+  .hero-h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-h2 {
+    font-size: 2em;
+  }
+
+  .hero-body {
+    font-size: 1em;
+    max-width: 100%;
   }
   
   .container {
@@ -783,6 +821,11 @@ footer .column {
     justify-content: center;
     gap: 0;
     width: 100%;
+  }
+
+  .about-container {
+    margin-top: 2rem;
+    gap: 2rem;
   }
 
   .image-container {
@@ -801,8 +844,15 @@ footer .column {
   .price-container {
     min-height: auto;
   }
+
   .accordian {
     padding: 0rem 1rem;
+  }
+
+  .icon {
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
   }
 
   section {
@@ -881,7 +931,7 @@ footer .column {
 
   nav a.active-link {
   border-bottom: none;
-  border-left: solid 2px #000000;
+  border-left: solid 2px var(--color-bg-black);
   }
 
   .contact-form input {
